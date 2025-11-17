@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Payback Auto-Coupon Activator",
+  "version": "1.2",
+  "description": "Automatically activates Payback coupons.",
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "https://www.payback.de/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.payback.de/coupons*",
+        "https://www.payback.de/ecoupons*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
